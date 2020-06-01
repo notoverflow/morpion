@@ -161,24 +161,24 @@ public class unjoueur extends AppCompatActivity {
 
                 nb = 0;
 
+                caserand = (int) (Math.random() * (9 - 1));
+                while (cochee[caserand] != 0 && nb<9) {
                     caserand = (int) (Math.random() * (9 - 1));
-                    while (cochee[caserand] != 0 && nb<9) {
-                        caserand = (int) (Math.random() * (9 - 1));
-                        nb++;
+                    nb++;
                 }
 
-                    if (nb==9) {
-                        // Plus de case
+                if (nb==9) {
+                    // Plus de case
 
-                    } else {
+                } else {
 
-                        cochee[caserand] = 2;
-                        cas[caserand].setImageResource(R.drawable.croix);
+                    cochee[caserand] = 2;
+                    cas[caserand].setImageResource(R.drawable.croix);
 
 
-                        joueur = 1;
+                    joueur = 1;
 
-                    }
+                }
 
 
             }
@@ -189,7 +189,7 @@ public class unjoueur extends AppCompatActivity {
             if (joueurgagne == 1) {
 
                 for (int i = 0; i < 9; i++)
-                    cas[i].setClickable(false);
+                     cas[i].setClickable(false);
                 question.setMessage(R.string.vousgagner);
 
 
@@ -198,7 +198,7 @@ public class unjoueur extends AppCompatActivity {
             if (joueurgagne == 2) {
 
                 for (int i = 0; i < 9; i++)
-                    cas[i].setClickable(false);
+                     cas[i].setClickable(false);
                 question.setMessage(R.string.ordigagner);
             }
 
@@ -253,100 +253,77 @@ public class unjoueur extends AppCompatActivity {
                 caseordi = true;
 
                 if (cochee[0] == cochee[1] && cochee[1] == 1 && caseordi) {
-                        joue(2);
+                    joue(2);
                 }
                 if (cochee[2] == cochee[1] && cochee[2] == 1 && caseordi) {
-                    casereflex = 0;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[0] == cochee[2] && cochee[0] == 1) {
-                    casereflex = 1;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[3] == cochee[4] && cochee[4] == 1) {
-                    casereflex = 5;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[4] == cochee[5] & cochee[4] == 1) {
-                    casereflex = 3;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[3] == cochee[5] && cochee[3] == 1) {
-                    casereflex = 4;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[6] == cochee[7] && cochee[7] == 1) {
-                    casereflex = 8;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[7] == cochee[8] & cochee[7] == 1) {
-                    casereflex = 6;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[6] == cochee[8] && cochee[6] == 1) {
-                    casereflex = 7;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[0] == cochee[3] && cochee[0] == 1) {
-                    casereflex = 6;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[0] == cochee[6] && cochee[0] == 1) {
-                    casereflex = 3;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[3] == cochee[6] && cochee[3] == 1) {
-                    casereflex = 0;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[1] == cochee[4] && cochee[1] == 1) {
-                    casereflex = 7;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[1] == cochee[7] && cochee[1] == 1) {
-                    casereflex = 4;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[4] == cochee[7] && cochee[4] == 7) {
-                    casereflex = 1;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[2] == cochee[5] && cochee[2] == 1) {
-                    casereflex = 8;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[2] == cochee[8] && cochee[2] == 1) {
-                    casereflex = 5;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[5] == cochee[8] && cochee[5] == 8) {
-                    casereflex = 2;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[0] == cochee[4] && cochee[0] == 1) {
-                    casereflex = 8;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[0] == cochee[8] && cochee[0] == 1) {
-                    casereflex = 4;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[4] == cochee[8] && cochee[4] == 1) {
-                    casereflex = 0;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[2] == cochee[4] && cochee[2] == 1) {
-                    casereflex = 6;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[2] == cochee[6] && cochee[2] == 1) {
-                    casereflex = 4;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else if (cochee[4] == cochee[6] && cochee[4] == 1) {
-                    casereflex = 2;
-                    cas[casereflex].setImageResource(R.drawable.croix);
-                    caseordi = false;
+                    joue(2);
+
                 } else {
 
                     caserand = (int) (Math.random() * (9 - 1));
@@ -372,7 +349,7 @@ public class unjoueur extends AppCompatActivity {
             if (joueurgagne == 1) {
 
                 for (int i = 0; i < 9; i++)
-                    cas[i].setClickable(false);
+                     cas[i].setClickable(false);
                 question.setMessage(R.string.vousgagner);
 
 
@@ -381,7 +358,7 @@ public class unjoueur extends AppCompatActivity {
             if (joueurgagne == 2) {
 
                 for (int i = 0; i < 9; i++)
-                    cas[i].setClickable(false);
+                     cas[i].setClickable(false);
                 question.setMessage(R.string.ordigagner);
             }
 
