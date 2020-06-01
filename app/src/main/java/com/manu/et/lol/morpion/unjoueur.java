@@ -255,9 +255,6 @@ public class unjoueur extends AppCompatActivity {
                 if (cochee[0] == cochee[1] && cochee[1] == 1 && caseordi) {
                         joue(2);
                 }
-
-
-
                 if (cochee[2] == cochee[1] && cochee[2] == 1 && caseordi) {
                     casereflex = 0;
                     cas[casereflex].setImageResource(R.drawable.croix);
