@@ -309,6 +309,7 @@ public class unjoueur extends AppCompatActivity {
                 } else if (cochee[0] == cochee[4] && cochee[0] == 1) {
                     joue(2);
 
+
                 } else if (cochee[0] == cochee[8] && cochee[0] == 1) {
                     joue(2);
 
