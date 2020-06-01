@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Morpion++</string>
+    <string name="title">Bienvenue sur ce morpion</string>
+    <string name="choisir">Quel mode de jeux</string>
+    <string name="deuxjoueur">2 joueurs</string>
+    <string name="nivun">facile</string>
+    <string name="nivdeux">moyen</string>
+    <string name="nivtrois">difficile</string>
+    <string name="modedeuxjoueur">Mode 2 joueurs !</string>
+
+    <string name="probleme">"he patate cette case est deja prise "</string>
+    <string name="joueur1gagner">Bravo ! le joueur 1 à gagner !</string>
+    <string name="rejouer">voulez vous rejouer ?</string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
+    <string name="voirgrille">Voir la grille</string>
+    <string name="joueur2gagner">Bravo ! le joueur 2 à gagner !</string>
+    <string name="egalite">Egaliter!</string>
+    <string name="modeunjoueur">mode 1 joueur</string>
+    <string name="vousgagner">bravo! vous avez gagner!</string>
+    <string name="ordigagner">dommage! vous avez perdu</string>
+</resources>

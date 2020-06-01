@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".unjoueur">
+
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+        android:text="@string/modeunjoueur"
+        android:textSize="20sp"
+        />
+
+
+    <TextView
+        android:id="@+id/probleme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/type"
+        android:layout_marginTop="15sp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/test"
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+        android:layout_marginLeft="45sp"
+        android:layout_marginRight="45sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginBottom="50sp"
+        android:layout_centerInParent="true"
+        >
+
+        <ImageView
+            android:id="@+id/caseun"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_toLeftOf="@id/v1"
+            android:onClick="clickCase"
+            android:layout_marginLeft="7sp"
+            android:layout_marginRight="7sp"
+            />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="10sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_view"
+            android:layout_toLeftOf="@id/casedeux"
+
+
+            />
+
+        <ImageView
+            android:id="@+id/casedeux"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_centerHorizontal="true"
+            android:onClick="clickCase"
+            android:layout_marginLeft="7sp"
+            android:layout_marginRight="7sp"
+            />
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="10sp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/casedeux"
+            android:background="@drawable/round_view" />
+
+        <ImageView
+            android:id="@+id/casetrois"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_toRightOf="@id/v2"
+            android:onClick="clickCase"
+            android:layout_marginLeft="7sp"
+            android:layout_marginRight="7sp"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/casequatre"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_toLeftOf="@id/v1"
+            android:layout_below="@id/v3"
+            android:layout_marginLeft="7sp"
+            android:layout_marginRight="7sp"
+            android:layout_marginTop="15sp"
+            android:onClick="clickCase"
+            />
+
+        <View
+            android:id="@+id/v3"
+            android:layout_width="wrap_content"
+            android:layout_height="10sp"
+            android:background="@drawable/round_view"
+            android:layout_below="@id/casedeux"
+            android:layout_marginTop="15sp"
+            />
+
+        <ImageView
+            android:id="@+id/casecinq"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/v3"
+            android:layout_marginTop="15sp"
+            android:layout_marginLeft="7sp"
+            android:layout_marginRight="7sp"
+            android:onClick="clickCase"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/casesix"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_toRightOf="@id/v2"
+            android:layout_below="@id/v3"
+            android:layout_marginLeft="7sp"
+            android:layout_marginRight="7sp"
+            android:onClick="clickCase"
+            android:layout_marginTop="15sp"
+            />
+
+        <ImageView
+            android:id="@+id/casesept"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_toLeftOf="@id/v1"
+            android:layout_below="@id/v4"
+            android:layout_marginLeft="7sp"
+            android:layout_marginRight="7sp"
+            android:layout_marginTop="15sp"
+            android:onClick="clickCase"
+            />
+
+        <View
+            android:id="@+id/v4"
+            android:layout_width="match_parent"
+            android:layout_height="10sp"
+            android:background="@drawable/round_view"
+            android:layout_below="@id/casecinq"
+            android:layout_marginTop="15sp"
+            />
+
+        <ImageView
+            android:id="@+id/casehuit"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/v4"
+            android:layout_marginTop="15sp"
+            android:onClick="clickCase"
+            android:layout_marginLeft="7sp"
+            android:layout_marginRight="7sp"
+            />
+
+        <ImageView
+            android:id="@+id/caseneuf"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_toRightOf="@id/v2"
+            android:layout_marginTop="15sp"
+            android:layout_marginLeft="7sp"
+            android:layout_marginRight="7sp"
+            android:layout_below="@id/v4"
+            android:onClick="clickCase"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

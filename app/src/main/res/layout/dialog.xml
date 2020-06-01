@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flou">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <TextView
+            android:id="@+id/gagne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25sp"
+
+            />
+
+        <TextView
+            android:id="@+id/rejouer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/rejouer"
+            android:layout_below="@id/gagne"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rejouer"
+            android:orientation="horizontal"
+            android:layout_marginTop="15sp">
+
+
+            <Button
+                android:id="@+id/oui"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/round_button"
+                android:layout_marginRight="10sp"
+                android:layout_marginLeft="5sp"
+                android:text="@string/oui"
+                />
+
+            <Button
+                android:id="@+id/non"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/round_button"
+                android:layout_marginRight="10sp"
+                android:layout_marginLeft="10sp"
+                android:text="@string/non"
+                />
+
+            <Button
+                android:id="@+id/grille"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_button"
+                android:layout_marginRight="5sp"
+                android:layout_marginLeft="10sp"
+                android:text="@string/voirgrille"
+
+                android:layout_marginBottom="25sp"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
