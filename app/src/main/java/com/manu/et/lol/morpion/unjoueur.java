@@ -123,7 +123,6 @@ public class unjoueur extends AppCompatActivity {
 //niveau un:facile
         if (niveau == 1) {
 
-            tour++;
 
             if (joueur == 1) {
                 if (cochee[caseTapee] != 0) {
@@ -338,10 +337,25 @@ public class unjoueur extends AppCompatActivity {
 
                 joueur = 1;
             }
+            if (tour == 8) {
+
+                int remplis;
+                int caseseul = 10;
+
+                remplis = 0;
+                for (remplis = 0; remplis < 9; remplis++) {
+                    if (cochee[remplis] != 0) {
+                        caseseul = remplis;
+                    }
+                }
+                cochee[caseseul] = 1;
+                cas[caseseul].setImageResource(R.drawable.rond);
+
+            }
 
 
             if (joueurgagne == 1) {
-
+                tour++;
                 for (int i = 0; i < 9; i++)
                      cas[i].setClickable(false);
                 question.setMessage(R.string.vousgagner);
