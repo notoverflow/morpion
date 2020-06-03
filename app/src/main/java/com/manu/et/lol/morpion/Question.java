@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 
 import com.manu.et.lol.morpion.R.layout;
 
+import static android.view.Window.*;
+
 public class Question extends Dialog {
 
     public static final int oui = 0;
