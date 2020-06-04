@@ -120,8 +120,9 @@ public class unjoueur extends AppCompatActivity {
         int caserand;
         caserand = 3;
 
-//niveau un:facile
         if (niveau == 1) {
+
+//niveau un:facile
 
 
             if (joueur == 1) {
@@ -219,8 +220,8 @@ public class unjoueur extends AppCompatActivity {
 
         }
 
-//        niveau2: moyen bloque si possible
         if (niveau == 2) {
+//        niveau2: moyen bloque si possible
 
 
             if (joueur == 1) {
@@ -240,20 +241,26 @@ public class unjoueur extends AppCompatActivity {
 
                 }
             }
-            test();
-            if (joueur == 2) {
+//            test();
+            if (joueur == 2 && !test()) {
 
                 caseordi = true;
 
                 if (cochee[0] == cochee[1] && cochee[1] == 1 && caseordi) {
                     joue(2);
-                }else if (cochee[2] == cochee[1] && cochee[2] == 1 && caseordi) {
+                }
+
+                if (cochee[2] == cochee[1] && cochee[2] == 1 && caseordi) {
                     joue(0);
 
-                }else if (cochee[0] == cochee[2] && cochee[0] == 1 && caseordi) {
+                }
+
+                if (cochee[0] == cochee[2] && cochee[0] == 1 && caseordi) {
                     joue(1);
 
-                }else if (cochee[3] == cochee[4] && cochee[4] == 1 && caseordi) {
+                }
+
+                if (cochee[3] == cochee[4] && cochee[4] == 1 && caseordi) {
                     joue(5);
 
                 }else if (cochee[4] == cochee[5] & cochee[4] == 1 && caseordi) {
@@ -315,11 +322,9 @@ public class unjoueur extends AppCompatActivity {
                 }else if (cochee[4] == cochee[6] && cochee[4] == 1 && caseordi) {
                     joue(2);
 
-                }else if (joueur == 2) {
+                }//todo enlever else
 
-                    caseordi = true;
 
-                }
 
                 if (caseordi) {
 
@@ -337,13 +342,15 @@ public class unjoueur extends AppCompatActivity {
 
                 joueur = 1;
             }
-            if (tour == 8) {
 
-                int remplis;
+            if (tour == 8 && !test()) {
+
+//                int remplis;
                 int caseseul = 10;
 
-                remplis = 0;
-                for (remplis = 0; remplis < 9; remplis++) {
+//                remplis = 0;
+
+                for (int remplis = 0; remplis < 9; remplis++) {
                     if (cochee[remplis] != 0) {
                         caseseul = remplis;
                     }
@@ -408,7 +415,7 @@ public class unjoueur extends AppCompatActivity {
         joueur = 1;
     }
 
-    private void test() {
+    private boolean test() {
 
 
         if (cochee[0] != 0 && cochee[0] == cochee[1] && cochee[1] == cochee[2]) {
@@ -446,8 +453,8 @@ public class unjoueur extends AppCompatActivity {
         if (cochee[2] != 0 && cochee[2] == cochee[4] && cochee[4] == cochee[6]) {
 
             joueurgagne = cochee[2];
-
-
         }
+
+        return joueurgagne != 0;
     }
 }
