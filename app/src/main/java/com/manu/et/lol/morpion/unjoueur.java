@@ -70,16 +70,18 @@ public class unjoueur extends AppCompatActivity {
 
                 switch (question.getRetour()) {
 
+
                     case Question.oui:
                         joueurgagne = 0;
                         joueur = 1;
-
+                        tour = 0;
                         for (int n = 0; n < 9; n++) {
                             cochee[n] = 0;
                             cas[n].setImageResource(R.drawable.vide);
                             cas[n].setClickable(true);
                         }
                         i = 0;
+
 
                         isGrille = false;
 
@@ -223,8 +225,24 @@ public class unjoueur extends AppCompatActivity {
         if (niveau == 2) {
 //        niveau2: moyen bloque si possible
 
+            tour++;
+            if (tour == 9 ) {
 
+                int caseseul = 10;
+
+
+                for (int remplis = 0; remplis < 9; remplis++) {
+                    if (cochee[remplis] != 0) {
+                        caseseul = remplis;
+                    }
+                }
+                cochee[caseseul] = 1;
+                cas[caseseul].setImageResource(R.drawable.rond);
+
+            }
             if (joueur == 1) {
+
+
                 if (cochee[caseTapee] != 0) {
 
                     probleme.setVisibility(View.VISIBLE);
@@ -239,10 +257,12 @@ public class unjoueur extends AppCompatActivity {
 
                     joueur = 2;
 
+
                 }
             }
 //            test();
             if (joueur == 2 && !test()) {
+
 
                 caseordi = true;
 
@@ -343,26 +363,10 @@ public class unjoueur extends AppCompatActivity {
                 joueur = 1;
             }
 
-            if (tour == 8 && !test()) {
 
-//                int remplis;
-                int caseseul = 10;
-
-//                remplis = 0;
-
-                for (int remplis = 0; remplis < 9; remplis++) {
-                    if (cochee[remplis] != 0) {
-                        caseseul = remplis;
-                    }
-                }
-                cochee[caseseul] = 1;
-                cas[caseseul].setImageResource(R.drawable.rond);
-
-            }
 
 
             if (joueurgagne == 1) {
-                tour++;
                 for (int i = 0; i < 9; i++)
                      cas[i].setClickable(false);
                 question.setMessage(R.string.vousgagner);
