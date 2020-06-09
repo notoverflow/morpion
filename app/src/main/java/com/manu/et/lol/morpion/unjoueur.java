@@ -225,21 +225,7 @@ public class unjoueur extends AppCompatActivity {
         if (niveau == 2) {
 //        niveau2: moyen bloque si possible
 
-            tour++;
-            if (tour == 8 ) {
 
-                int caseseul = 10;
-
-
-                for (int remplis = 0; remplis < 9; remplis++) {
-                    if (cochee[remplis] != 0) {
-                        caseseul = remplis;
-                    }
-                }
-                cochee[caseseul] = 1;
-                cas[caseseul].setImageResource(R.drawable.rond);
-
-            }
             if (joueur == 1) {
 
 
@@ -249,7 +235,8 @@ public class unjoueur extends AppCompatActivity {
                     probleme.setText(R.string.probleme);
 
                     return;
-                } else {
+                }
+                if (cochee[caseTapee] == 0) {
 
 
                     cochee[caseTapee] = 1;
@@ -259,8 +246,9 @@ public class unjoueur extends AppCompatActivity {
 
 
                 }
+                test();
             }
-//            test();
+//
             if (joueur == 2 && !test()) {
 
 
@@ -382,7 +370,7 @@ public class unjoueur extends AppCompatActivity {
                 if (cochee[4] == cochee[6] && cochee[4] == 1 && caseordi) {
                     joue(2);
 
-                }//todo enlever else
+                }
 
 
 
