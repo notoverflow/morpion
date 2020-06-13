@@ -419,7 +419,7 @@ public class unjoueur extends AppCompatActivity {
                 }
             }
 
-            if (plein && joueurgagne != 1 && joueurgagne != 2) {
+            if (plein && joueurgagne != 1 || joueurgagne != 2) {
                 question.setMessage(R.string.egalite);
                 question.show();
 
