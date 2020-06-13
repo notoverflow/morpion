@@ -12,6 +12,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView settings;
+    private Button difficile;
 
     private int i = 0;
 
@@ -19,7 +20,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         settings = findViewById(R.id.settings);
+        settings.setVisibility(View.INVISIBLE);
+        difficile = findViewById(R.id.nivtrois);
+        difficile.setVisibility(View.INVISIBLE);
 
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return;
         }
+
+
 
         Intent ddd = new Intent(getApplicationContext(), com.manu.et.lol.morpion.unjoueur.class);
         ddd.putExtra("niveau", niveau);
