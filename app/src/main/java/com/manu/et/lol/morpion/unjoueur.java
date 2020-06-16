@@ -71,6 +71,7 @@ public class unjoueur extends AppCompatActivity {
                 switch (question.getRetour()) {
 
 
+
                     case Question.oui:
                         joueurgagne = 0;
                         joueur = 1;
@@ -254,121 +255,129 @@ public class unjoueur extends AppCompatActivity {
 
                 caseordi = true;
 
-                if (cochee[0] == cochee[1] && cochee[1] == 1 && caseordi) {
-                    joue(2);
-                }
 
-                if (cochee[2] == cochee[1] && cochee[2] == 1 && caseordi) {
-                    joue(0);
+                {
 
-                }
 
-                if (cochee[0] == cochee[2] && cochee[0] == 1 && caseordi) {
-                    joue(1);
+                    if (cochee[0] == cochee[1] && cochee[1] == 1 && caseordi) {
+                        joue(2);
+                    }
 
-                }
+                    if (cochee[2] == cochee[1] && cochee[2] == 1 && caseordi) {
+                        joue(0);
 
-                if (cochee[3] == cochee[4] && cochee[4] == 1 && caseordi) {
-                    joue(5);
+                    }
 
-                }
+                    if (cochee[0] == cochee[2] && cochee[0] == 1 && caseordi) {
+                        joue(1);
 
-                if (cochee[4] == cochee[5] & cochee[4] == 1 && caseordi) {
-                    joue(3);
+                    }
 
-                }
+                    if (cochee[3] == cochee[4] && cochee[4] == 1 && caseordi) {
+                        joue(5);
 
-                if (cochee[3] == cochee[5] && cochee[3] == 1 && caseordi) {
-                    joue(4);
+                    }
 
-                }
+                    if (cochee[4] == cochee[5] & cochee[4] == 1 && caseordi) {
+                        joue(3);
 
-                if (cochee[6] == cochee[7] && cochee[7] == 1 && caseordi) {
-                    joue(8);
+                    }
 
-                }
+                    if (cochee[3] == cochee[5] && cochee[3] == 1 && caseordi) {
+                        joue(4);
 
-                if (cochee[7] == cochee[8] & cochee[7] == 1 && caseordi) {
-                    joue(6);
+                    }
 
-                }
+                    if (cochee[6] == cochee[7] && cochee[7] == 1 && caseordi) {
+                        joue(8);
 
-                if (cochee[6] == cochee[8] && cochee[6] == 1 && caseordi) {
-                    joue(7);
+                    }
 
-                }
+                    if (cochee[7] == cochee[8] & cochee[7] == 1 && caseordi) {
+                        joue(6);
 
-                if (cochee[0] == cochee[3] && cochee[0] == 1 && caseordi) {
-                    joue(6);
+                    }
 
-                }
+                    if (cochee[6] == cochee[8] && cochee[6] == 1 && caseordi) {
+                        joue(7);
 
-                if (cochee[0] == cochee[6] && cochee[0] == 1 && caseordi) {
-                    joue(3);
+                    }
 
-                }
+                    if (cochee[0] == cochee[3] && cochee[0] == 1 && caseordi) {
+                        joue(6);
 
-                if (cochee[3] == cochee[6] && cochee[3] == 1 && caseordi) {
-                    joue(0);
+                    }
 
-                }
+                    if (cochee[0] == cochee[6] && cochee[0] == 1 && caseordi) {
+                        joue(3);
 
-                if (cochee[1] == cochee[4] && cochee[1] == 1 && caseordi) {
-                    joue(7);
+                    }
 
-                }
+                    if (cochee[3] == cochee[6] && cochee[3] == 1 && caseordi) {
+                        joue(0);
 
-                if (cochee[1] == cochee[7] && cochee[1] == 1 && caseordi) {
-                    joue(4);
+                    }
 
-                }
+                    if (cochee[1] == cochee[4] && cochee[1] == 1 && caseordi) {
+                        joue(7);
 
-                if (cochee[4] == cochee[7] && cochee[4] == 7 && caseordi) {
-                    joue(1);
+                    }
 
-                }
+                    if (cochee[1] == cochee[7] && cochee[1] == 1 && caseordi) {
+                        joue(4);
 
-                if (cochee[2] == cochee[5] && cochee[2] == 1 && caseordi) {
-                    joue(8);
+                    }
 
-                }
+                    if (cochee[4] == cochee[7] && cochee[4] == 7 && caseordi) {
+                        joue(1);
 
-                if (cochee[2] == cochee[8] && cochee[2] == 1 && caseordi) {
-                    joue(5);
+                    }
 
-                }
+                    if (cochee[2] == cochee[5] && cochee[2] == 1 && caseordi) {
+                        joue(8);
 
-                if (cochee[5] == cochee[8] && cochee[5] == 8 && caseordi) {
-                    joue(2);
+                    }
 
-                }
+                    if (cochee[2] == cochee[8] && cochee[2] == 1 && caseordi) {
+                        joue(5);
 
-                if (cochee[0] == cochee[4] && cochee[0] == 1 && caseordi) {
-                    joue(8);
+                    }
 
-                }
+                    if (cochee[5] == cochee[8] && cochee[5] == 8 && caseordi) {
+                        joue(2);
 
-                if (cochee[0] == cochee[8] && cochee[0] == 1 && caseordi) {
-                    joue(4);
-                }
+                    }
 
-                if (cochee[4] == cochee[8] && cochee[4] == 1 && caseordi) {
-                    joue(0);
+                    if (cochee[0] == cochee[4] && cochee[0] == 1 && caseordi) {
+                        joue(8);
 
-                }
+                    }
 
-                if (cochee[2] == cochee[4] && cochee[2] == 1 && caseordi) {
-                    joue(6);
+                    if (cochee[0] == cochee[8] && cochee[0] == 1 && caseordi) {
+                        joue(4);
+                    }
 
-                }
+                    if (cochee[4] == cochee[8] && cochee[4] == 1 && caseordi) {
+                        joue(0);
 
-                if (cochee[2] == cochee[6] && cochee[2] == 1 && caseordi) {
-                    joue(4);
+                    }
 
-                }
+                    if (cochee[2] == cochee[4] && cochee[2] == 1 && caseordi) {
+                        joue(6);
 
-                if (cochee[4] == cochee[6] && cochee[4] == 1 && caseordi) {
-                    joue(2);
+
+
+                    }
+
+                    if (cochee[2] == cochee[6] && cochee[2] == 1 && caseordi) {
+                        joue(4);
+
+                    }
+
+                    if (cochee[4] == cochee[6] && cochee[4] == 1 &&  caseordi) {
+                        joue(2);
+
+                    }
 
                 }
 
