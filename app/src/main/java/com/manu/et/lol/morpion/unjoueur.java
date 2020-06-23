@@ -392,17 +392,17 @@ public class unjoueur extends AppCompatActivity {
             if (joueurgagne == 2) {
 
                 for (int i = 0; i < 9; i++)
-                    cas[i].setClickable(false);
-                    question.setMessage(R.string.ordigagner);
+                     cas[i].setClickable(false);
+                question.setMessage(R.string.ordigagner);
             }
 
 
-            boolean plein = true;
+            boolean plein = false;
 
 
             for (int a = 0; a < 9; a++) {
                 if (cochee[a] == 0) {
-                    plein = false;
+                    plein = true;
                 }
             }
 
