@@ -253,76 +253,82 @@ public class unjoueur extends AppCompatActivity {
 
                 caseordi = true;
 
+
+
+
+
+
+
                 {
                     if (cochee[0] == cochee[1] && cochee[1] == 1 && caseordi) {
                         joue(2);
                     }
                     if (cochee[2] == cochee[1] && cochee[2] == 1 && caseordi) {
-                        joue(2);
+                        joue(0);
 
                     } else if (cochee[0] == cochee[2] && cochee[0] == 1) {
-                        joue(2);
+                        joue(1);
 
                     } else if (cochee[3] == cochee[4] && cochee[4] == 1) {
-                        joue(2);
+                        joue(5);
 
                     } else if (cochee[4] == cochee[5] & cochee[4] == 1) {
-                        joue(2);
+                        joue(3);
 
                     } else if (cochee[3] == cochee[5] && cochee[3] == 1) {
-                        joue(2);
+                        joue(4);
 
                     } else if (cochee[6] == cochee[7] && cochee[7] == 1) {
-                        joue(2);
+                        joue(8);
 
                     } else if (cochee[7] == cochee[8] & cochee[7] == 1) {
-                        joue(2);
+                        joue(6);
 
                     } else if (cochee[6] == cochee[8] && cochee[6] == 1) {
-                        joue(2);
+                        joue(7);
 
                     } else if (cochee[0] == cochee[3] && cochee[0] == 1) {
-                        joue(2);
+                        joue(6);
 
                     } else if (cochee[0] == cochee[6] && cochee[0] == 1) {
-                        joue(2);
+                        joue(3);
 
                     } else if (cochee[3] == cochee[6] && cochee[3] == 1) {
-                        joue(2);
+                        joue(0);
 
                     } else if (cochee[1] == cochee[4] && cochee[1] == 1) {
-                        joue(2);
+                        joue(7);
 
                     } else if (cochee[1] == cochee[7] && cochee[1] == 1) {
-                        joue(2);
+                        joue(4);
 
                     } else if (cochee[4] == cochee[7] && cochee[4] == 7) {
-                        joue(2);
+                        joue(1);
 
                     } else if (cochee[2] == cochee[5] && cochee[2] == 1) {
-                        joue(2);
+                        joue(8);
 
                     } else if (cochee[2] == cochee[8] && cochee[2] == 1) {
-                        joue(2);
+                        joue(5);
 
                     } else if (cochee[5] == cochee[8] && cochee[5] == 8) {
                         joue(2);
 
                     } else if (cochee[0] == cochee[4] && cochee[0] == 1) {
-                        joue(2);
+                        joue(8);
 
 
                     } else if (cochee[0] == cochee[8] && cochee[0] == 1) {
-                        joue(2);
+                        joue(4);
 
                     } else if (cochee[4] == cochee[8] && cochee[4] == 1) {
-                        joue(2);
+                        joue(0);
 
                     } else if (cochee[2] == cochee[4] && cochee[2] == 1) {
-                        joue(2);
+                        joue(6);
 
                     } else if (cochee[2] == cochee[6] && cochee[2] == 1) {
-                        joue(2);
+                        joue(4);
 
                     } else if (cochee[4] == cochee[6] && cochee[4] == 1) {
                         joue(2);
@@ -336,20 +342,17 @@ public class unjoueur extends AppCompatActivity {
                         }
                     }
                 }
-            test();
 
-            if (caseordi) {
-                cochee[caserand] = 2;
-                cas[caserand].setImageResource(R.drawable.croix);
+                test();
+
+                if (caseordi) {
+                    cochee[caserand] = 2;
+                    cas[caserand].setImageResource(R.drawable.croix);
+                }
+
+
+                joueur = 1;
             }
-
-
-            joueur = 1;
-        }
-
-
-
-
 
 
             if (joueurgagne == 1) {
