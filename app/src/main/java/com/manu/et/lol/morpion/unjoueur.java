@@ -251,8 +251,10 @@ public class unjoueur extends AppCompatActivity {
 
                 }
             }
+
             test();
             if (joueur == 2 && joueurgagne == 0) {
+
 
                 Log.i("ttt", "joueur 2");
 
@@ -370,10 +372,7 @@ public class unjoueur extends AppCompatActivity {
 
                 test();
 
-                if (caseordi) {
-                    cochee[caserand] = 2;
-                    cas[caserand].setImageResource(R.drawable.croix);
-                }
+
 
 
                 joueur = 1;
@@ -444,6 +443,7 @@ public class unjoueur extends AppCompatActivity {
             caserand = (int) (Math.random() * (9 - 1));
             while (cochee[caserand] != 0) {
                 caserand = (int) (Math.random() * (9 - 1));
+
 
                 tour++;
 
