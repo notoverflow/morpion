@@ -24,6 +24,8 @@ public class unjoueur extends AppCompatActivity {
     private int niveau;
     private boolean caseordi=true;
     private int casereflex;
+    private int caserand;
+
 
 
 
@@ -129,7 +131,6 @@ public class unjoueur extends AppCompatActivity {
 
         Log.i("ttt", "Case tapée : " + caseTapee);
 
-        int caserand;
         caserand = 3;
 
 //niveau un:facile
@@ -246,98 +247,122 @@ public class unjoueur extends AppCompatActivity {
 
                     joueur = 2;
 
+                    Log.i("ttt", "joueur 1 : " + caseTapee);
+
                 }
             }
             test();
-            if (joueur == 2) {
+            if (joueur == 2 && joueurgagne == 0) {
+
+                Log.i("ttt", "joueur 2");
 
                 caseordi = true;
 
 
-
-
-
-
-
                 {
-                    if (cochee[0] == cochee[1] && cochee[1] == 1 && caseordi) {
+                    if (cochee[0] == cochee[1] && cochee[1] == 1 && cochee[2] == 0 && caseordi) {
                         joue(2);
                     }
+
                     if (cochee[2] == cochee[1] && cochee[2] == 1 && caseordi) {
                         joue(0);
 
-                    } else if (cochee[0] == cochee[2] && cochee[0] == 1) {
+                    }
+                    if (cochee[0] == cochee[2] && cochee[0] == 1 && caseordi) {
                         joue(1);
 
-                    } else if (cochee[3] == cochee[4] && cochee[4] == 1) {
+                    }
+                    if (cochee[3] == cochee[4] && cochee[4] == 1 && caseordi) {
                         joue(5);
 
-                    } else if (cochee[4] == cochee[5] & cochee[4] == 1) {
+                    }
+                    if (cochee[4] == cochee[5] & cochee[4] == 1 && caseordi) {
                         joue(3);
 
-                    } else if (cochee[3] == cochee[5] && cochee[3] == 1) {
+                    }
+                    if (cochee[3] == cochee[5] && cochee[3] == 1 && caseordi) {
                         joue(4);
 
-                    } else if (cochee[6] == cochee[7] && cochee[7] == 1) {
+                    }
+                    if (cochee[6] == cochee[7] && cochee[7] == 1 && caseordi) {
                         joue(8);
 
-                    } else if (cochee[7] == cochee[8] & cochee[7] == 1) {
+                    }
+                    if (cochee[7] == cochee[8] & cochee[7] == 1 && caseordi) {
                         joue(6);
 
-                    } else if (cochee[6] == cochee[8] && cochee[6] == 1) {
+                    }
+                    if (cochee[6] == cochee[8] && cochee[6] == 1 && caseordi) {
                         joue(7);
 
-                    } else if (cochee[0] == cochee[3] && cochee[0] == 1) {
+                    }
+                    if (cochee[0] == cochee[3] && cochee[0] == 1 && caseordi) {
                         joue(6);
 
-                    } else if (cochee[0] == cochee[6] && cochee[0] == 1) {
+                    }
+                    if (cochee[0] == cochee[6] && cochee[0] == 1 && caseordi) {
                         joue(3);
 
-                    } else if (cochee[3] == cochee[6] && cochee[3] == 1) {
+                    }
+                    if (cochee[3] == cochee[6] && cochee[3] == 1 && caseordi) {
                         joue(0);
 
-                    } else if (cochee[1] == cochee[4] && cochee[1] == 1) {
+                    }
+                    if (cochee[1] == cochee[4] && cochee[1] == 1 && caseordi) {
                         joue(7);
 
-                    } else if (cochee[1] == cochee[7] && cochee[1] == 1) {
+                    }
+                    if (cochee[1] == cochee[7] && cochee[1] == 1 && caseordi) {
                         joue(4);
 
-                    } else if (cochee[4] == cochee[7] && cochee[4] == 7) {
+                    }
+                    if (cochee[4] == cochee[7] && cochee[4] == 7 && caseordi) {
                         joue(1);
 
-                    } else if (cochee[2] == cochee[5] && cochee[2] == 1) {
+                    }
+                    if (cochee[2] == cochee[5] && cochee[2] == 1 && caseordi) {
                         joue(8);
 
-                    } else if (cochee[2] == cochee[8] && cochee[2] == 1) {
+                    }
+                    if (cochee[2] == cochee[8] && cochee[2] == 1 && caseordi) {
                         joue(5);
 
-                    } else if (cochee[5] == cochee[8] && cochee[5] == 8) {
+                    }
+                    if (cochee[5] == cochee[8] && cochee[5] == 8 && caseordi) {
                         joue(2);
 
-                    } else if (cochee[0] == cochee[4] && cochee[0] == 1) {
+                    }
+                    if (cochee[0] == cochee[4] && cochee[0] == 1 && caseordi) {
                         joue(8);
 
 
-                    } else if (cochee[0] == cochee[8] && cochee[0] == 1) {
+                    }
+                    if (cochee[0] == cochee[8] && cochee[0] == 1 && caseordi) {
                         joue(4);
 
-                    } else if (cochee[4] == cochee[8] && cochee[4] == 1) {
+                    }
+                    if (cochee[4] == cochee[8] && cochee[4] == 1 && caseordi) {
                         joue(0);
 
-                    } else if (cochee[2] == cochee[4] && cochee[2] == 1) {
+                    }
+                    if (cochee[2] == cochee[4] && cochee[2] == 1 && caseordi) {
                         joue(6);
 
-                    } else if (cochee[2] == cochee[6] && cochee[2] == 1) {
+                    }
+                    if (cochee[2] == cochee[6] && cochee[2] == 1 && caseordi) {
                         joue(4);
 
-                    } else if (cochee[4] == cochee[6] && cochee[4] == 1) {
+                    }
+                    if (cochee[4] == cochee[6] && cochee[4] == 1 && caseordi) {
                         joue(2);
 
-                    } else {
+                    }
+                    if (caseordi) {
 
                         caserand = (int) (Math.random() * (9 - 1));
                         while (cochee[caserand] != 0) {
                             caserand = (int) (Math.random() * (9 - 1));
+                            Log.i("ttt", "random");
 
                         }
                     }
@@ -360,6 +385,7 @@ public class unjoueur extends AppCompatActivity {
                 for (int i = 0; i < 9; i++)
                      cas[i].setClickable(false);
                 question.setMessage(R.string.vousgagner);
+                probleme.setVisibility(View.INVISIBLE);
 
 
             }
@@ -369,6 +395,8 @@ public class unjoueur extends AppCompatActivity {
                 for (int i = 0; i < 9; i++)
                      cas[i].setClickable(false);
                 question.setMessage(R.string.ordigagner);
+                probleme.setVisibility(View.INVISIBLE);
+
             }
 
 
@@ -399,10 +427,39 @@ public class unjoueur extends AppCompatActivity {
     }
 
     private void joue(int c) {
-        if (cochee[c]==0) {
+        if (cochee[c] == 0) {
             cas[c].setImageResource(R.drawable.croix);
             cochee[c] = 2;
-            caseordi = false;
+            caseordi  = false;
+        } else {
+
+            int ttt;
+            ttt = 0;
+            int tour;
+            tour = 0;
+            int a = 0;
+            int caset = 6;
+
+
+            caserand = (int) (Math.random() * (9 - 1));
+            while (cochee[caserand] != 0) {
+                caserand = (int) (Math.random() * (9 - 1));
+
+                tour++;
+
+                if (tour == 9) {
+                    while (a == 0) {
+                        if (cochee[a] != 0) {
+                            caset=a;
+                        }
+                    }
+                }
+                ttt++;
+                Log.i("ttt", "random : " + ttt);
+                cas[caset].setImageResource(R.drawable.croix);
+                cochee[caset] = 2;
+                cochee[caserand] = 0;
+            }
         }
     }
 
