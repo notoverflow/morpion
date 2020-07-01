@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,9 +70,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        if (niveau == 2) {
 
-        Intent ddd = new Intent(getApplicationContext(), com.manu.et.lol.morpion.unjoueur.class);
-        ddd.putExtra("niveau", niveau);
-        startActivity(ddd);
+            Toast.makeText(this, "En cours de devloppement", Toast.LENGTH_SHORT).show();
+
+        } else {
+
+            Intent ddd = new Intent(getApplicationContext(), com.manu.et.lol.morpion.unjoueur.class);
+            ddd.putExtra("niveau", niveau);
+            startActivity(ddd);
+        }
     }
 }

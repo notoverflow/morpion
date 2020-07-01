@@ -25,13 +25,7 @@ public class unjoueur extends AppCompatActivity {
     private boolean caseordi=true;
     private int casereflex;
     private int caserand;
-
-
-
-
-
-
-
+    public boolean casereflechie=true;
 
 
     @Override
@@ -154,8 +148,9 @@ public class unjoueur extends AppCompatActivity {
 
                 }
             }
+            test();
 
-            if (joueur == 2) {
+            if (joueur == 2 && joueurgagne == 0) {
 
 
                 int nb;
@@ -163,12 +158,12 @@ public class unjoueur extends AppCompatActivity {
                 nb = 0;
 
                 caserand = (int) (Math.random() * (9 - 1));
-                while (cochee[caserand] != 0 && nb<9) {
+                while (cochee[caserand] != 0 && nb < 9) {
                     caserand = (int) (Math.random() * (9 - 1));
                     nb++;
                 }
 
-                if (nb==9) {
+                if (nb == 9) {
                     // Plus de case
 
                 } else {
@@ -372,7 +367,10 @@ public class unjoueur extends AppCompatActivity {
 
                 test();
 
-
+                if (caseordi=true && casereflechie == false) {
+                    cochee[caserand] = 2;
+                    cas[caserand].setImageResource(R.drawable.croix);
+                }
 
 
                 joueur = 1;
@@ -427,10 +425,13 @@ public class unjoueur extends AppCompatActivity {
 
     private void joue(int c) {
         if (cochee[c] == 0) {
+            casereflechie = false;
             cas[c].setImageResource(R.drawable.croix);
             cochee[c] = 2;
             caseordi  = false;
         } else {
+
+            casereflechie = false;
 
             int ttt;
             ttt = 0;
