@@ -29,8 +29,8 @@
 
     <RelativeLayout
         android:id="@+id/test"
-        android:layout_width="300sp"
-        android:layout_height="300sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="45sp"
         android:layout_marginRight="45sp"
         android:layout_marginTop="50sp"
@@ -51,7 +51,7 @@
         <View
             android:id="@+id/v1"
             android:layout_width="10sp"
-            android:layout_height="wrap_content"
+            android:layout_height="300sp"
             android:background="@drawable/round_view"
             android:layout_toLeftOf="@id/casedeux"
 
@@ -62,16 +62,16 @@
             android:id="@+id/casedeux"
             android:layout_width="70sp"
             android:layout_height="70sp"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:onClick="clickCase"
             android:layout_marginLeft="7sp"
             android:layout_marginRight="7sp"
-            />
+            android:onClick="clickCase" />
 
         <View
             android:id="@+id/v2"
             android:layout_width="10sp"
-            android:layout_height="wrap_content"
+            android:layout_height="300sp"
             android:layout_toRightOf="@id/casedeux"
             android:background="@drawable/round_view" />
 

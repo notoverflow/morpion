@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (niveau == 2) {
 
-            Toast.makeText(this, "En cours de devloppement", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "En cours de developpement", Toast.LENGTH_SHORT).show();
 
         } else {
 
