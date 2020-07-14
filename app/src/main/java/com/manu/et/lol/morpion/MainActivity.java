@@ -70,11 +70,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        if (niveau == 2) {
-
-            Toast.makeText(this, "En cours de developpement", Toast.LENGTH_SHORT).show();
-
-        } else {
+         {
 
             Intent ddd = new Intent(getApplicationContext(), com.manu.et.lol.morpion.unjoueur.class);
             ddd.putExtra("niveau", niveau);

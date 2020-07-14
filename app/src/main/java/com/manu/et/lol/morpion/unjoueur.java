@@ -157,14 +157,18 @@ public class unjoueur extends AppCompatActivity {
 
                 nb = 0;
 
+
                 caserand = (int) (Math.random() * (9 - 1));
                 while (cochee[caserand] != 0 && nb < 9) {
                     caserand = (int) (Math.random() * (9 - 1));
                     nb++;
+
+
                 }
 
-                if (nb == 9) {
-                    // Plus de case
+                if (nb == 9 && joueurgagne == 0) {
+
+
 
                 } else {
 
@@ -261,99 +265,214 @@ public class unjoueur extends AppCompatActivity {
                         joue(2);
                     }
 
-                    if (cochee[2] == cochee[1] && cochee[2] == 1 && caseordi) {
+                    if (cochee[2] == cochee[1] && cochee[2] == 1 && cochee[0] == 0 && caseordi) {
+
                         joue(0);
 
                     }
-                    if (cochee[0] == cochee[2] && cochee[0] == 1 && caseordi) {
+                    if (cochee[0] == cochee[2] && cochee[0] == 1 && cochee[1] == 0 && caseordi) {
                         joue(1);
 
                     }
-                    if (cochee[3] == cochee[4] && cochee[4] == 1 && caseordi) {
+                    if (cochee[3] == cochee[4] && cochee[4] == 1 && cochee[5] == 0 && caseordi) {
                         joue(5);
 
                     }
-                    if (cochee[4] == cochee[5] & cochee[4] == 1 && caseordi) {
+                    if (cochee[4] == cochee[5] & cochee[4] == 1 && cochee[3] == 0 && caseordi) {
                         joue(3);
 
                     }
-                    if (cochee[3] == cochee[5] && cochee[3] == 1 && caseordi) {
+                    if (cochee[3] == cochee[5] && cochee[3] == 1 && cochee[4] == 0 && caseordi) {
                         joue(4);
 
                     }
-                    if (cochee[6] == cochee[7] && cochee[7] == 1 && caseordi) {
+                    if (cochee[6] == cochee[7] && cochee[7] == 1 && cochee[8] == 0 && caseordi) {
+
                         joue(8);
 
                     }
-                    if (cochee[7] == cochee[8] & cochee[7] == 1 && caseordi) {
+                    if (cochee[7] == cochee[8] & cochee[7] == 1 && cochee[6] == 0 && caseordi) {
+
                         joue(6);
 
                     }
-                    if (cochee[6] == cochee[8] && cochee[6] == 1 && caseordi) {
+                    if (cochee[6] == cochee[8] && cochee[6] == 1 && cochee[7] == 0 && caseordi) {
                         joue(7);
 
                     }
-                    if (cochee[0] == cochee[3] && cochee[0] == 1 && caseordi) {
+                    if (cochee[0] == cochee[3] && cochee[0] == 1 && cochee[6] == 0 && caseordi) {
                         joue(6);
 
                     }
-                    if (cochee[0] == cochee[6] && cochee[0] == 1 && caseordi) {
+                    if (cochee[0] == cochee[6] && cochee[0] == 1 && cochee[3] == 0 && caseordi) {
                         joue(3);
 
                     }
-                    if (cochee[3] == cochee[6] && cochee[3] == 1 && caseordi) {
+                    if (cochee[3] == cochee[6] && cochee[3] == 1 && cochee[0] == 0 && caseordi) {
                         joue(0);
 
                     }
-                    if (cochee[1] == cochee[4] && cochee[1] == 1 && caseordi) {
+                    if (cochee[1] == cochee[4] && cochee[1] == 1 && cochee[7] == 0 && caseordi) {
                         joue(7);
 
                     }
-                    if (cochee[1] == cochee[7] && cochee[1] == 1 && caseordi) {
+                    if (cochee[1] == cochee[7] && cochee[1] == 1 && cochee[4] == 0 && caseordi) {
                         joue(4);
 
                     }
-                    if (cochee[4] == cochee[7] && cochee[4] == 7 && caseordi) {
+                    if (cochee[4] == cochee[7] && cochee[4] == 7 && cochee[1] == 0 && caseordi) {
                         joue(1);
 
                     }
-                    if (cochee[2] == cochee[5] && cochee[2] == 1 && caseordi) {
+                    if (cochee[2] == cochee[5] && cochee[2] == 1 && cochee[8] == 0 && caseordi) {
                         joue(8);
 
                     }
-                    if (cochee[2] == cochee[8] && cochee[2] == 1 && caseordi) {
+                    if (cochee[2] == cochee[8] && cochee[2] == 1 && cochee[5] == 0 && caseordi) {
                         joue(5);
 
                     }
-                    if (cochee[5] == cochee[8] && cochee[5] == 8 && caseordi) {
+                    if (cochee[5] == cochee[8] && cochee[5] == 8 && cochee[2] == 0 && caseordi) {
                         joue(2);
 
                     }
-                    if (cochee[0] == cochee[4] && cochee[0] == 1 && caseordi) {
+                    if (cochee[0] == cochee[4] && cochee[0] == 1 && cochee[8] == 0 && caseordi) {
                         joue(8);
 
 
                     }
-                    if (cochee[0] == cochee[8] && cochee[0] == 1 && caseordi) {
+                    if (cochee[0] == cochee[8] && cochee[0] == 1 && cochee[4] == 0 && caseordi) {
                         joue(4);
 
                     }
-                    if (cochee[4] == cochee[8] && cochee[4] == 1 && caseordi) {
+                    if (cochee[4] == cochee[8] && cochee[4] == 1 && cochee[0] == 0 && caseordi) {
                         joue(0);
 
                     }
-                    if (cochee[2] == cochee[4] && cochee[2] == 1 && caseordi) {
+                    if (cochee[2] == cochee[4] && cochee[2] == 1 && cochee[6] == 0 && caseordi) {
                         joue(6);
 
                     }
-                    if (cochee[2] == cochee[6] && cochee[2] == 1 && caseordi) {
+                    if (cochee[2] == cochee[6] && cochee[2] == 1 && cochee[4] == 0 && caseordi) {
                         joue(4);
 
                     }
-                    if (cochee[4] == cochee[6] && cochee[4] == 1 && caseordi) {
+                    if (cochee[4] == cochee[6] && cochee[4] == 1 && cochee[2] == 0 && caseordi) {
                         joue(2);
 
                     }
+                }
+
+                if (joueur == 2) {
+
+                    if (cochee[0] == cochee[1] && cochee[1] == 2 && cochee[2] == 0 && caseordi) {
+                        joue(2);
+                    }
+
+                    if (cochee[2] == cochee[1] && cochee[2] == 2 && cochee[0] == 0 && caseordi) {
+
+                        joue(0);
+
+                    }
+                    if (cochee[0] == cochee[2] && cochee[0] == 2 && cochee[1] == 0 && caseordi) {
+                        joue(1);
+
+                    }
+                    if (cochee[3] == cochee[4] && cochee[4] == 2 && cochee[5] == 0 && caseordi) {
+                        joue(5);
+
+                    }
+                    if (cochee[4] == cochee[5] & cochee[4] == 2 && cochee[3] == 0 && caseordi) {
+                        joue(3);
+
+                    }
+                    if (cochee[3] == cochee[5] && cochee[3] == 2 && cochee[4] == 0 && caseordi) {
+                        joue(4);
+
+                    }
+                    if (cochee[6] == cochee[7] && cochee[7] == 2 && cochee[8] == 0 && caseordi) {
+
+                        joue(8);
+
+                    }
+                    if (cochee[7] == cochee[8] & cochee[7] == 2 && cochee[6] == 0 && caseordi) {
+
+                        joue(6);
+
+                    }
+                    if (cochee[6] == cochee[8] && cochee[6] == 2 && cochee[7] == 0 && caseordi) {
+                        joue(7);
+
+                    }
+                    if (cochee[0] == cochee[3] && cochee[0] == 2 && cochee[6] == 0 && caseordi) {
+                        joue(6);
+
+                    }
+                    if (cochee[0] == cochee[6] && cochee[0] == 2 && cochee[3] == 0 && caseordi) {
+                        joue(3);
+
+                    }
+                    if (cochee[3] == cochee[6] && cochee[3] == 2 && cochee[0] == 0 && caseordi) {
+                        joue(0);
+
+                    }
+                    if (cochee[1] == cochee[4] && cochee[1] == 2 && cochee[7] == 0 && caseordi) {
+                        joue(7);
+
+                    }
+                    if (cochee[1] == cochee[7] && cochee[1] == 2 && cochee[4] == 0 && caseordi) {
+                        joue(4);
+
+                    }
+                    if (cochee[4] == cochee[7] && cochee[4] == 2 && cochee[1] == 0 && caseordi) {
+                        joue(1);
+
+                    }
+                    if (cochee[2] == cochee[5] && cochee[2] == 2 && cochee[8] == 0 && caseordi) {
+                        joue(8);
+
+                    }
+                    if (cochee[2] == cochee[8] && cochee[2] == 2 && cochee[5] == 0 && caseordi) {
+                        joue(5);
+
+                    }
+                    if (cochee[5] == cochee[8] && cochee[5] == 2 && cochee[2] == 0 && caseordi) {
+                        joue(2);
+
+                    }
+                    if (cochee[0] == cochee[4] && cochee[0] == 2 && cochee[8] == 0 && caseordi) {
+                        joue(8);
+
+
+                    }
+                    if (cochee[0] == cochee[8] && cochee[0] == 2 && cochee[4] == 0 && caseordi) {
+                        joue(4);
+
+                    }
+                    if (cochee[4] == cochee[8] && cochee[4] == 2 && cochee[0] == 0 && caseordi) {
+                        joue(0);
+
+                    }
+                    if (cochee[2] == cochee[4] && cochee[2] == 2 && cochee[6] == 0 && caseordi) {
+                        joue(6);
+
+                    }
+                    if (cochee[2] == cochee[6] && cochee[2] == 2 && cochee[4] == 0 && caseordi) {
+                        joue(4);
+
+                    }
+                    if (cochee[4] == cochee[6] && cochee[4] == 2 && cochee[2] == 0 && caseordi) {
+                        joue(2);
+
+                    }
+
+
+                }else {
+
+                }
+
+
+                if (joueur == 2) {
                     if (caseordi) {
 
                         caserand = (int) (Math.random() * (9 - 1));
@@ -363,7 +482,11 @@ public class unjoueur extends AppCompatActivity {
 
                         }
                     }
+                } else {
+
                 }
+
+
 
                 test();
 
