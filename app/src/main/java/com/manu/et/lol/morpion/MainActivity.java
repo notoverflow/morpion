@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nivun :
                 niveau = 1;
                 break;
-
             case R.id.nivdeux :
+
                 niveau = 2;
                 break;
 

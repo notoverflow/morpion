@@ -227,6 +227,7 @@ public class unjoueur extends AppCompatActivity {
         }
 //        niveau2: moyen bloque si possible
 
+
         if (niveau == 2) {
 
 
@@ -571,7 +572,7 @@ public class unjoueur extends AppCompatActivity {
 
                 tour++;
 
-                if (tour == 9) {
+                if (tour == 10) {
                     while (a == 0) {
                         if (cochee[a] != 0) {
                             caset=a;
