@@ -491,7 +491,7 @@ public class unjoueur extends AppCompatActivity {
 
                 test();
 
-                if (caseordi=true && casereflechie == false) {
+                if (caseordi&& !casereflechie) {
                     cochee[caserand] = 2;
                     cas[caserand].setImageResource(R.drawable.croix);
                 }
@@ -530,7 +530,7 @@ public class unjoueur extends AppCompatActivity {
                 }
             }
 
-            if (plein && joueurgagne != 1 && joueurgagne != 2) {
+            if (plein) {
                 question.setMessage(R.string.egalite);
                 question.show();
 
@@ -585,6 +585,11 @@ public class unjoueur extends AppCompatActivity {
                 cochee[caset] = 2;
                 cochee[caserand] = 0;
             }
+            cochee[caset] = 2;
+            cochee[caserand] = 0;
+            cas[caset].setImageResource(R.drawable.croix);
+            cochee[caset] = 2;
+            cochee[caserand] = 0;
         }
     }
 
