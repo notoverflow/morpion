@@ -575,6 +575,7 @@ public class unjoueur extends AppCompatActivity {
                     truc = 0;
                     if (cochee[truc] == 0) {
 
+
                     }
 
                 }
