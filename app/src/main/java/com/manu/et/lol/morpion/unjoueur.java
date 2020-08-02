@@ -227,7 +227,6 @@ public class unjoueur extends AppCompatActivity {
         }
 //        niveau2: moyen bloque si possible
 
-
         if (niveau == 2) {
 
 
@@ -563,6 +562,8 @@ public class unjoueur extends AppCompatActivity {
             tour = 0;
             int a = 0;
             int caset = 6;
+            int ppp = 0;
+            int truc;
 
 
             caserand = (int) (Math.random() * (9 - 1));
@@ -570,16 +571,17 @@ public class unjoueur extends AppCompatActivity {
                 caserand = (int) (Math.random() * (9 - 1));
 
 
-                tour++;
+                while (ppp < 10) {
+                    truc = 0;
+                    if (cochee[truc] == 0) {
 
-                if (tour == 10) {
-                    while (a == 0) {
-                        if (cochee[a] != 0) {
-                            caset=a;
-                        }
                     }
+
                 }
+
+
                 ttt++;
+                tour++;
                 Log.i("ttt", "random : " + ttt);
                 cas[caset].setImageResource(R.drawable.croix);
                 cochee[caset] = 2;
