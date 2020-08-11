@@ -1,4 +1,4 @@
-package com.manu.et.lol.morpion;
+package com.notoverflow.morpion;
 
 import androidx.appcompat.app.AppCompatActivity;
 

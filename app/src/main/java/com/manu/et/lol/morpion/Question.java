@@ -1,4 +1,4 @@
-package com.manu.et.lol.morpion;
+package com.notoverflow.morpion;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.manu.et.lol.morpion.R.layout;
+import com.notoverflow.morpion.R.layout;
 
 import static android.view.Window.*;
 

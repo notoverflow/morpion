@@ -1,4 +1,4 @@
-package com.manu.et.lol.morpion;
+package com.notoverflow.morpion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.notoverflow.morpion.Question;
 
 public class deuxjoueur extends AppCompatActivity {
 

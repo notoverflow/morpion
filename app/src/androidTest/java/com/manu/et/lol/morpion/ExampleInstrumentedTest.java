@@ -1,4 +1,4 @@
-package com.manu.et.lol.morpion;
+package com.notoverflow.morpion;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.manu.et.lol.morpion", appContext.getPackageName());
+        assertEquals("com.notoverflow.morpion", appContext.getPackageName());
     }
 }

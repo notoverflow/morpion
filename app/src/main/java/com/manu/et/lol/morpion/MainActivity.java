@@ -1,4 +1,4 @@
-package com.manu.et.lol.morpion;
+package com.notoverflow.morpion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+import com.notoverflow.morpion.unjoueur;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,13 +27,12 @@ public class MainActivity extends AppCompatActivity {
         settings = findViewById(R.id.settings);
         settings.setVisibility(View.INVISIBLE);
         difficile = findViewById(R.id.nivtrois);
-        difficile.setVisibility(View.INVISIBLE);
 
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent activi = new Intent(getApplicationContext(), com.manu.et.lol.morpion.settings.class);
+                Intent activi = new Intent(getApplicationContext(), com.notoverflow.morpion.settings.class);
                 startActivity(activi);
             }
         });
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent ttt = new Intent(getApplicationContext(), com.manu.et.lol.morpion.deuxjoueur.class);
+                Intent ttt = new Intent(getApplicationContext(), com.notoverflow.morpion.deuxjoueur.class);
                 startActivity(ttt);
             }
         });
@@ -54,27 +55,23 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.nivun :
-                niveau = 1;
+                niveau = unjoueur.NIVEAU_FACILE;
                 break;
             case R.id.nivdeux :
 
-                niveau = 2;
+                niveau = unjoueur.NIVEAU_MOYEN;
                 break;
 
             case R.id.nivtrois :
-                niveau = 3;
+                niveau = unjoueur.NIVEAU_DIFFICILE;
                 break;
 
             default:
                 return;
         }
 
-
-         {
-
-            Intent ddd = new Intent(getApplicationContext(), com.manu.et.lol.morpion.unjoueur.class);
+            Intent ddd = new Intent(getApplicationContext(), com.notoverflow.morpion.unjoueur.class);
             ddd.putExtra("niveau", niveau);
             startActivity(ddd);
-        }
     }
 }
