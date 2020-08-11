@@ -376,6 +376,7 @@ public class unjoueur extends AppCompatActivity {
                 if (joueurgagne == 0) {
                     Log.i("ttt", "joueur 2 : Pas bloqué");
                 } else {
+
                     Log.i("ttt", "joueur 2 : bloqué");
                 }
 
