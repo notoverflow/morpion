@@ -190,10 +190,9 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        ads:adUnitId="ca-app-pub-9696781235898812/4672178576">
     </com.google.android.gms.ads.AdView>
 
 <!--    mon id de pub: ca-app-pub-9696781235898812/4672178576 -->
-<!--    todo changer l'id de pub-->
 
 </RelativeLayout>

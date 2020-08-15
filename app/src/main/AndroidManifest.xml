@@ -23,9 +23,8 @@
         <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
-<!--        mon id de pub : -->
-<!--        TODO changer l'id de pub-->
+            android:value="ca-app-pub-9696781235898812~3976569227"/>
+<!--        mon id de pub : ca-app-pub-9696781235898812~3976569227-->
     </application>
 
 </manifest>

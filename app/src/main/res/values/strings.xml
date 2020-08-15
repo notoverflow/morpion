@@ -1,22 +1,22 @@
 <resources>
     <string name="app_name">Tik-Tak-Toe++</string>
     <string name="title">Welcome to this tik-tak-toe</string>
-    <string name="choisir">What game mode</string>
+    <string name="choisir">Chose you game mode</string>
     <string name="deuxjoueur">2 player</string>
     <string name="nivun">easy</string>
     <string name="nivdeux">medium</string>
     <string name="nivtrois">difficult</string>
-    <string name="modedeuxjoueur">2 player mode</string>
+    <string name="modedeuxjoueur">2 players mode</string>
 
     <string name="probleme">hey potato, this box is already taken :\'c</string>
     <string name="joueur1gagner">Well done ! player 1 won!</string>
-    <string name="rejouer">do you want to replay?</string>
+    <string name="rejouer">Do you want to replay?</string>
     <string name="oui">Yes</string>
     <string name="non">Non</string>
     <string name="voirgrille">" See the grid"</string>
-    <string name="joueur2gagner">Well done ! player 2 won!</string>
+    <string name="joueur2gagner">Well done ! Player 2 won !</string>
     <string name="egalite">Equality!</string>
     <string name="modeunjoueur">"1 player mode "</string>
-    <string name="vousgagner">well done! you have won !</string>
+    <string name="vousgagner">Well done ! You have won !</string>
     <string name="ordigagner">pity! you lost</string>
 </resources>
