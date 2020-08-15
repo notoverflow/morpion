@@ -1,22 +1,22 @@
 <resources>
-    <string name="app_name">Morpion++</string>
-    <string name="title">Bienvenue sur ce morpion</string>
-    <string name="choisir">Quel mode de jeux</string>
-    <string name="deuxjoueur">2 joueurs</string>
-    <string name="nivun">facile</string>
-    <string name="nivdeux">moyen</string>
-    <string name="nivtrois">difficile</string>
-    <string name="modedeuxjoueur">Mode 2 joueurs !</string>
+    <string name="app_name">Tik-Tak-Toe++</string>
+    <string name="title">Welcome to this tik-tak-toe</string>
+    <string name="choisir">What game mode</string>
+    <string name="deuxjoueur">2 player</string>
+    <string name="nivun">easy</string>
+    <string name="nivdeux">medium</string>
+    <string name="nivtrois">difficult</string>
+    <string name="modedeuxjoueur">2 player mode</string>
 
-    <string name="probleme">hé patate, cette case est dejà prise</string>
-    <string name="joueur1gagner">Bravo ! le joueur 1 a gagné !</string>
-    <string name="rejouer">voulez-vous rejouer ?</string>
-    <string name="oui">Oui</string>
+    <string name="probleme">hey potato, this box is already taken :\'c</string>
+    <string name="joueur1gagner">Well done ! player 1 won!</string>
+    <string name="rejouer">do you want to replay?</string>
+    <string name="oui">Yes</string>
     <string name="non">Non</string>
-    <string name="voirgrille">Voir la grille</string>
-    <string name="joueur2gagner">Bravo ! le joueur 2 a gagné !</string>
-    <string name="egalite">Egalité !</string>
-    <string name="modeunjoueur">mode 1 joueur</string>
-    <string name="vousgagner">bravo! vous avez gagné !</string>
-    <string name="ordigagner">dommage! vous avez perdu</string>
+    <string name="voirgrille">" See the grid"</string>
+    <string name="joueur2gagner">Well done ! player 2 won!</string>
+    <string name="egalite">Equality!</string>
+    <string name="modeunjoueur">"1 player mode "</string>
+    <string name="vousgagner">well done! you have won !</string>
+    <string name="ordigagner">pity! you lost</string>
 </resources>

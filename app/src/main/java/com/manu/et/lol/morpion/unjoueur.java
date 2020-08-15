@@ -9,12 +9,21 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.notoverflow.morpion.Question;
 
 
 public class unjoueur extends AppCompatActivity {
 
+
     // Des constantes :
+
+    private AdRequest adRequest;
+    private AdView    adView;
 
     public final static int NIVEAU_FACILE = 1;
     public final static int NIVEAU_MOYEN = 2;
@@ -40,6 +49,8 @@ public class unjoueur extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unjoueur);
+
+        loadPub();
 
 
         cas[0] = findViewById(R.id.caseun);
@@ -658,4 +669,73 @@ public class unjoueur extends AppCompatActivity {
             joueurgagne = cochee[2];
         }
     }
+
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+
+        if (adView != null) {
+            adView.resume();
+
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        if (adView != null) {
+            adView.pause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (adView != null) {
+            adView.destroy();
+
+        }
+        super.onDestroy();
+    }
+
+    private void loadPub() {
+        adRequest = new AdRequest.Builder()
+                .addTestDevice("72BC668537B5617DBB7381C8C100AF34")      // id dui device de test pour les pubs
+                .build();
+
+        adView=findViewById(R.id.adView);
+        adView.loadAd(adRequest);
+
+        adView.setAdListener(new AdListener(){
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError loadAdError) {
+                super.onAdFailedToLoad(loadAdError);
+            }
+
+            @Override
+            public void onAdOpened() {
+                super.onAdOpened();
+            }
+
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+            }
+
+            @Override
+            public void onAdClicked() {
+                super.onAdClicked();
+            }
+        });
+
+
+    }
+
+
+
 }
