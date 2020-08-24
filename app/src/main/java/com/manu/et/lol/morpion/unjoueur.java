@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.LoadAdError;
 import com.notoverflow.morpion.Question;
 
@@ -44,6 +45,11 @@ public class unjoueur extends AppCompatActivity {
     private int caserand;
     public boolean casereflechie=true;
 
+    private static final String ID_INTER = "ca-app-pub-9696781235898812/3218963278";
+    private InterstitialAd interstitialAd;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,15 +78,15 @@ public class unjoueur extends AppCompatActivity {
 
         niveau = temp.getIntExtra("niveau", 42);
 
-//        findViewById(R.id.test).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                if (isGrille) question.show();
-//
-//
-//            }
-//        });
+        findViewById(R.id.test).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (isGrille) question.show();
+
+
+            }
+        });
 
         question = new Question(this);
 
@@ -91,18 +97,11 @@ public class unjoueur extends AppCompatActivity {
                 switch (question.getRetour()) {
 
                     case Question.oui:
-                        joueurgagne = 0;
-                        joueur = 1;
-
-                        for (int n = 0; n < 9; n++) {
-                            cochee[n] = 0;
-                            cas[n].setImageResource(R.drawable.vide);
-                            cas[n].setClickable(true);
+                        if (interstitialAd != null && interstitialAd.isLoaded()) {
+                            interstitialAd.show();
+                        } else {
+                            rejouer();
                         }
-                        i = 0;
-
-                        isGrille = false;
-
                         break;
 
                     case Question.non:
@@ -121,11 +120,28 @@ public class unjoueur extends AppCompatActivity {
                         break;
                 }
 
+
             }
         });
 
 
+
     }
+    private void rejouer() {
+
+        joueurgagne = 0;
+        joueur = 1;
+
+        for (int n = 0; n < 10; n++) {
+            cochee[n] = 0;
+            cas[n].setImageResource(R.drawable.vide);
+            cas[n].setClickable(true);
+        }
+        i = 0;
+
+        isGrille = false;
+    }
+
 
 
 
@@ -721,7 +737,6 @@ public class unjoueur extends AppCompatActivity {
             public void onAdOpened() {
                 super.onAdOpened();
             }
-
             @Override
             public void onAdLoaded() {
                 super.onAdLoaded();
@@ -730,6 +745,22 @@ public class unjoueur extends AppCompatActivity {
             @Override
             public void onAdClicked() {
                 super.onAdClicked();
+            }
+        });
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(ID_INTER);
+        interstitialAd.loadAd(adRequest);
+
+        interstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdFailedToLoad(LoadAdError loadAdError) {
+                interstitialAd.loadAd(adRequest);
+            }
+
+            @Override
+            public void onAdClosed() {
+                interstitialAd.loadAd(adRequest);
+                rejouer();
             }
         });
 

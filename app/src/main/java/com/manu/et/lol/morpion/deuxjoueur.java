@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.LoadAdError;
 import com.notoverflow.morpion.Question;
 
@@ -33,6 +34,11 @@ public class deuxjoueur extends AppCompatActivity {
 
     private AdRequest adRequest;
     private AdView    adView;
+
+    private static final String ID_INTER = "ca-app-pub-9696781235898812/7138042893";
+    private InterstitialAd interstitialAd;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,17 +81,11 @@ public class deuxjoueur extends AppCompatActivity {
                 switch (question.getRetour()) {
 
                     case Question.oui:
-                        joueurgagne = 0;
-                        joueur = 1;
-
-                        for (int n = 0; n < 9; n++) {
-                            cochee[n] = 0;
-                            cas[n].setImageResource(R.drawable.vide);
-                            cas[n].setClickable(true);
+                        if (interstitialAd != null && interstitialAd.isLoaded()) {
+                            interstitialAd.show();
+                        } else {
+                            rejouer();
                         }
-                        i = 0;
-
-                        isGrille = false;
 
                         break;
 
@@ -109,6 +109,21 @@ public class deuxjoueur extends AppCompatActivity {
         });
 
 
+    }
+
+    private void rejouer() {
+
+        joueurgagne = 0;
+        joueur = 1;
+
+        for (int n = 0; n < 9; n++) {
+            cochee[n] = 0;
+            cas[n].setImageResource(R.drawable.vide);
+            cas[n].setClickable(true);
+        }
+        i = 0;
+
+        isGrille = false;
     }
 
 
@@ -293,7 +308,22 @@ public class deuxjoueur extends AppCompatActivity {
             }
         });
 
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(ID_INTER);
+        interstitialAd.loadAd(adRequest);
 
+        interstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdFailedToLoad(LoadAdError loadAdError) {
+                interstitialAd.loadAd(adRequest);
+            }
+
+            @Override
+            public void onAdClosed() {
+                interstitialAd.loadAd(adRequest);
+                rejouer();
+            }
+        });
     }
 
 
